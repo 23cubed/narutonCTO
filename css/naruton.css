@@ -121,7 +121,8 @@ p {
 
 .body {
   color: var(--white);
-  font-family: Montserrat, sans-serif;
+  background-color: #fff;
+  font-family: Friendszone, sans-serif;
   font-weight: 400;
 }
 
@@ -289,7 +290,7 @@ p {
 .hero_title {
   color: var(--black);
   text-transform: uppercase;
-  font-family: Exo, sans-serif;
+  font-family: Friendszone, sans-serif;
   font-size: 2.75rem;
   font-style: italic;
   font-weight: 600;
@@ -307,9 +308,9 @@ p {
 
 .hero_text {
   color: rgba(0, 0, 0, .9);
-  font-family: Exo, sans-serif;
+  font-family: Friendszone, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.4em;
 }
 
@@ -456,7 +457,6 @@ p {
 }
 
 .utility-page-wrap {
-  color: var(--white);
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -479,8 +479,9 @@ p {
   color: var(--white);
   background-color: #0796fc;
   border-radius: 1000px;
-  padding: 1.25rem 4rem 1rem;
-  font-family: Ninja Naruto, sans-serif;
+  padding: 1rem 4rem;
+  font-family: Friendszone, sans-serif;
+  font-size: 1.25rem;
   font-weight: 600;
   transition: all .5s cubic-bezier(.23, 1, .32, 1);
 }
@@ -490,11 +491,31 @@ p {
   transform: scale(.95);
 }
 
+.button.orange {
+  background-color: #ff7d0b;
+}
+
+.button.orange:hover {
+  background-color: #f17b13;
+}
+
+.button.small {
+  padding: .5rem 1.5rem;
+  font-size: .8rem;
+  line-height: 1;
+}
+
+.button.mtop-util {
+  margin-top: 2.5rem;
+  margin-right: auto;
+}
+
 .body-2 {
   font-family: Montserrat, sans-serif;
 }
 
 .heading {
+  color: var(--black);
   font-size: 2rem;
   line-height: 1.4;
 }
@@ -587,13 +608,14 @@ p {
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 2rem;
+  font-family: Ninja Naruto, sans-serif;
   font-size: 4rem;
   line-height: 1;
 }
 
 .tokenomics-section {
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -601,23 +623,24 @@ p {
 }
 
 .section-heading {
-  background-color: var(--white);
-  color: var(--dark-blue);
+  color: #000;
+  -webkit-text-stroke-color: #fff;
   text-transform: uppercase;
+  background-color: #ff7d0b;
   border-radius: .25rem;
   margin-top: 0;
   margin-bottom: 0;
   padding: .5rem 1rem;
+  font-family: Ninja Naruto, sans-serif;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.4;
 }
 
 .tokenomics-text {
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
-  font-size: 1.25rem;
-  font-weight: 300;
+  font-size: 2rem;
   line-height: 1.4;
   text-decoration: none;
 }
@@ -628,6 +651,15 @@ p {
 
 .tokenomics-text.link:hover {
   text-decoration: underline;
+}
+
+.tokenomics-text.explainer {
+  margin-top: -2rem;
+  font-size: 1rem;
+}
+
+.tokenomics-text.util {
+  font-size: 1.5rem;
 }
 
 .text-with-link-wrap {
@@ -641,7 +673,6 @@ p {
   background-color: rgba(255, 255, 255, .1);
   width: 100%;
   height: 1px;
-  margin-top: 2rem;
 }
 
 .button-grid {
@@ -816,20 +847,81 @@ p {
   width: 15rem;
 }
 
-.text-span {
+.hompage-heading {
   color: #4689e0;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   font-family: Ninja Naruto, sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.4;
+}
+
+.text-link {
+  color: #0796fc;
+  font-family: Friendszone, sans-serif;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  transition: all .2s;
+}
+
+.text-link:hover {
+  color: #0a84db;
+}
+
+.utility-content {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex-flow: column;
+  max-width: 50rem;
+  margin-bottom: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.utility-title-grid {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: wrap;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.button-small-icon {
+  font-family: "Fa 400", sans-serif;
+  font-size: .65rem;
+}
+
+.utility-page-form {
+  flex-direction: column;
+  align-items: stretch;
+  display: flex;
+}
+
+.body-3 {
+  background-color: #dee361;
 }
 
 @media screen and (min-width: 1440px) {
+  .tokenomics-text, .tokenomics-text.util {
+    font-size: 1.5rem;
+  }
+
   .button-1 {
     transform: scale(1.15);
   }
 
   .label {
     z-index: 5;
+  }
+
+  .utility-content {
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
   }
 }
 
@@ -921,6 +1013,10 @@ p {
     white-space: nowrap;
   }
 
+  .hero_title {
+    font-size: 2.25rem;
+  }
+
   .hero_text {
     font-family: Exo, sans-serif;
   }
@@ -937,6 +1033,10 @@ p {
     transform-origin: 50% 100%;
     transform: scale(.7);
   }
+
+  .hompage-heading {
+    font-size: 2.75rem;
+  }
 }
 
 #w-node-_06dc7245-4dc7-6153-0f59-80cbbb63f9f4-8a31721d {
@@ -944,7 +1044,7 @@ p {
   justify-self: center;
 }
 
-#w-node-_3acb3591-b0c5-89c4-44c0-cd3300a532f6-8a31721d {
+#w-node-_8ca5db0e-d2da-9e54-bded-037a0f171374-8a31721d {
   justify-self: center;
 }
 
@@ -965,6 +1065,13 @@ p {
 @font-face {
   font-family: 'Fa 400';
   src: url('../fonts/fa-regular-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Friendszone';
+  src: url('../fonts/Friendszone.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
