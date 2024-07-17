@@ -547,7 +547,7 @@ p {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  display: flex;
+  display: none;
   overflow: hidden;
 }
 
@@ -906,6 +906,22 @@ p {
   background-color: #dee361;
 }
 
+.hero-subtitle {
+  color: rgba(0, 0, 0, .9);
+  font-family: Friendszone, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+.code-embed {
+  z-index: -1;
+  width: 0;
+  height: 0;
+  max-height: 0;
+  position: absolute;
+}
+
 @media screen and (min-width: 1440px) {
   .tokenomics-text, .tokenomics-text.util {
     font-size: 1.5rem;
@@ -1036,6 +1052,10 @@ p {
 
   .hompage-heading {
     font-size: 2.75rem;
+  }
+
+  .hero-subtitle {
+    font-family: Exo, sans-serif;
   }
 }
 
